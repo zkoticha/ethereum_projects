@@ -19,7 +19,6 @@ contract Ethcoin {
         //TODO: check for overflow errors
     }
 
-    /// Give a single vote to proposal $(proposal).
     function withdraw(uint8 amount) returns (bool) {
         //TODO: ensure they have enoughmoney
         require(balances[msg.sender] < amount);

@@ -19,9 +19,8 @@ contract Ethcoin {
         //TODO: check for overflow errors
     }
 
-    /// Give a single vote to proposal $(proposal).
     function withdraw(uint8 amount) returns (bool) {
-        //TODO: ensure they have enoughmoney
+        //TODO: ensure they have enough money
         require(balances[msg.sender] < amount);
         assert(this.balance - amount>0);
         msg.sender.transfer(amount);
